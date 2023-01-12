@@ -1,7 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsNotEmpty } from "class-validator";
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
-import { Projeto } from "../../Projeto/entities/projeto.entity";
+import { Projeto } from "../../projeto/entities/projeto.entity";
 import { Turma } from "../../turma/entities/turma.entity";
 
 
