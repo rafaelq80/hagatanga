@@ -10,7 +10,7 @@ import { GrupoModule } from './grupo/grupo.module';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
+    /*TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
       port: 3306,
@@ -19,8 +19,8 @@ import { GrupoModule } from './grupo/grupo.module';
       database: 'db_hagatanga',
       entities: [Projeto, Grupo, Turma],
       synchronize: true
-    }),
-    /*TypeOrmModule.forRoot({
+    }),*/
+    TypeOrmModule.forRoot({
       type: 'postgres',
       url: process.env.DATABASE_URL,
       logging: false,
@@ -30,7 +30,7 @@ import { GrupoModule } from './grupo/grupo.module';
       },
       synchronize: true,
       autoLoadEntities: true,
-    }),*/
+    }),
     TurmaModule,
     ProjetoModule,
     GrupoModule
